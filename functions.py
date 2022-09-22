@@ -2,11 +2,12 @@
 #usually the names come as automated web crawling names which may have errors 
 #(ex zzzzzzFAB INDUSTRIES SDN BHD)
 def	cleanup_names(df):
-	df['Name'] = df['Name'].str.replace('[a-z]', '', regex=True)
-	df['Name'] = df['Name'].str.replace('[:-@]', '', regex=True)
-	df['Name'] = df['Name'].str.replace('[!-/]', '', regex=True)
-	df['Name'] = df['Name'].str.replace(' +', ' ', regex=True)
-	df['Name'] = df['Name'].str.strip()
+	name = 'Customer Name'
+	df[name] = df[name].str.replace('[a-z]', '', regex=True)
+	df[name] = df[name].str.replace('[:-@]', '', regex=True)
+	df[name] = df[name].str.replace('[!-/]', '', regex=True)
+	df[name] = df[name].str.replace(' +', ' ', regex=True)
+	df[name] = df[name].str.strip()
 
 #TODO: merge function
 #def	merge_names(db):
@@ -48,8 +49,6 @@ def	setrank_default(df, type):
 		df['Rank'] = 0
 	else:
 		df['Rank'] = 1
-
-
 
 def	setscore(df, type):
 	setrank_default(df, type)
