@@ -7,7 +7,7 @@ def	designation(df, weight, score):
 	df.loc[df[data] == 'Entry level', ['tmp']] = 4
 	df.loc[df[data].isnull(), ['tmp']] = 0
 	df[score] = df[score] + (df['tmp'] * weight)
-	print(df[[data, score]])
+	#print(df[[data, score]])
 
 #Fedex higher score because it's similar to DHL in offering higher rate but higher quality services, thus easy to convert.
 #Other couriers lower score because they occupy the 'lower cost' niche thus more difficult
@@ -20,7 +20,7 @@ def	competitors(df, weight, score):
 	df.loc[df[data] == 'Others', ['tmp']] = 4
 	df.loc[df[data].isnull(), ['tmp']] = 0
 	df[score] = df[score] + (df['tmp'] * weight)
-	print(df[[data, score]])
+	#print(df[[data, score]])
 	
 def	cleanrevenue(df):
 	data = 'Total Potential Revenue/Month'
@@ -40,13 +40,13 @@ def	revenue(df, weight, score):
 	df.loc[df[data] < 4999, ['tmp']] = 2
 	df.loc[df[data] == 0, ['tmp']] = 0
 	df[score] = df[score] + (df['tmp'] * weight)
-	print(df[[data, score]])
+	#print(df[[data, score]])
 	
-def	score(df):
+def	score(df, Weights):
 	score = 'Prospect Score'
 	df[score] = 0
-	designation(df, 1, score)
-	competitors(df, 1, score)
-	revenue(df, 1, score)
+	designation(df, Weights.des, score)
+	competitors(df, Weights.comp, score)
+	revenue(df, Weights.rev, score)
 	del df['tmp']
 	

@@ -66,13 +66,13 @@ def	membership(df, weight):
 	df.loc[data.isnull(), ['tmp']] = 0
 	df['Suspect Score'] = df['Suspect Score'] + (df['tmp'] * weight)
 
-def	score(df):
+def	score(df, Weights):
 	df['Suspect Score'] = 0
-	channel(df,1)
-	fbfollowers(df,1)
-	igfollowers(df,1)
-	website(df,1)
-	foreigncurrency(df,1)
-	membership(df,1)
+	channel(df,Weights.ch)
+	fbfollowers(df,Weights.fb)
+	igfollowers(df,Weights.ig)
+	website(df,Weights.web)
+	foreigncurrency(df,Weights.fc)
+	membership(df,Weights.mem)
 	del df['tmp']
 	#print(df[['Customer Name','Has Website','SCORE']])

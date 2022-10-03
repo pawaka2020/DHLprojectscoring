@@ -4,6 +4,9 @@
 
 #TODO: merge function
 #def	merge_names(db):
+
+
+
 def	cleanup_names(df):
 	name = 'Customer Name'
 	df[name] = df[name].str.replace('[a-z]', '', regex=True)
@@ -12,6 +15,11 @@ def	cleanup_names(df):
 	df[name] = df[name].str.replace(' +', ' ', regex=True)
 	df[name] = df[name].str.strip()
 
-
-	#df[data] = df[data] + 0
-	#print(df[['Customer Name','Total Potential Revenue/Month']])
+#merges duplicate names
+#the newer names will take precedent when merging
+#then arrange names by unique lead assignment number
+def	merge_names(df):
+	name = 'Customer Name'
+	num = 'Unique Lead Assignment Number'
+	df = df.groupby(name).last().reset_index()
+	df = df.groupby(num).last().reset_index()
