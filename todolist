@@ -1,0 +1,21 @@
+E00:
+1. Make FR and TR docs
+2. Make Gantt Chart
+
+E01:
+1. Make user journey map.
+2. Create functions to remove duplicates, redundancies, bad data.
+3. Have mandatory and non-mandatory fields.
+4. And have app print errors of these fields are not filled / remove those fields / simply apply score 0.
+
+E02:
+1. Make a matching function for users to perform searches based on certain parameters.
+2. Ask DHL team if we can get a data of converted leads to determine trends for scoring.
+3. (Bonus) see if we can identify suspects with potential to be nurtured to become customers.
+
+Demo:
+1. Explain understanding.
+2. Show user journey
+3. Explain constraints and assumptions made in developing the app.
+4. Live demo.
+5. Explain the architecture (flow, storing, sharing of data) as well as framework.

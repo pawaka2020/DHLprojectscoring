@@ -1,0 +1,28 @@
+E00:
+1. Requirements gathering.
+2. Include two docs: Functional Requirements(FR) & Technical Requirements(TR). 
+3. For FR: make a checklist on functionalities to be built, broken into small modules.
+4: For TR: make sure that architecture / framework used can support the technical needs (eg frontend, backend, database).
+5. Create Gantt Chart to show how team plans to complete modules and tasks within a time period.
+
+E01:
+1. Design a user journey map
+2. Aim - create a systematic and standardized data collection process. 
+3. Consider as well data type, data format and data organization.
+4. Reduce redundancies, duplicates and bad data (missing data, unstructured data).
+5. Minimum must include suspect's name, contact person's name and contact details.
+6. Identify all mandatory and non-mandatory fields.
+
+E02:
+1. Identify high level data patterns(data types?) that might be relevant to the ops team.
+2. Create a matching algorithm with parameters for user to perform searches.
+3. Come up with a scoring system.
+4. Analyze existing leads that are successflly converted to determine trends for the scoring mechanism.
+5. (Bonus) identity suspects that require nurturing in order to increase likelihood to become customers.
+
+Demo Day:
+1. Show understanding of problem to solve.
+2. Show user journey for the app.
+3. Present constraints and assumptions made for developing the solution.
+4. Live demonstration of the app / wireframe.
+5. Detailed explanation of the architecture (how data flows, is stored and shared, what framework used)
